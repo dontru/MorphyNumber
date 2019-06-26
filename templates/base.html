@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Morphy number{% endblock %}</title>
+</head>
+<body>
+<div id="header">
+  <div id="menu">
+    <a href="/">Home</a> |
+    <a href="/about/">About</a> |
+    <a href="/contact/">Contact</a>
+  </div>
+  <div id="logo">
+    <a href="/">Morphy number</a>
+  </div>
+</div>
+<div id="content">{% block content %}
+  <div id="searchform">
+    <span class="nowrap">
+      <input type="text" id="player-1" value="{{ player_1|default:"Paul Morphy" }}" autocomplete="off">
+      <span id="to">to</span>
+    </span>
+    <span class="nowrap">
+      <input type="text" id="player-2" value="{{ player_2 }}" autocomplete="off">
+      <button id="find">find</button>
+    </span>
+  </div>
+{% endblock %}</div>
+</body>
+</html>
