@@ -1,0 +1,84 @@
+@font-face {
+  font-family: Lato;
+  src: url(Lato-Regular.ttf);
+}
+
+@media (min-width: 1000px) {
+  #header { padding-top: 32px; }
+  #menu { margin-top: 29px; margin-left: 32px; position: absolute; }
+  #content { width: 1000px; }
+  input[type=text] { width: 200px; }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  #header { padding-top: 12px; }
+  #content { width: 768px; }
+  input[type=text] { width: 200px; }
+}
+
+@media (max-width: 767px) {
+  #header { padding-top: 12px; }
+  #content { width: 100%; }
+  #to { padding: 0 17px; }
+  input[type=text] { width: calc(100% - 100px); }
+}
+
+body {
+  background-color: #f7cb9c;
+  color: #3d1903;
+  font-family: Lato;
+  font-size: 16px;
+  margin: 0;
+  text-align: center;
+}
+
+a {
+  color: #3d1903;
+  text-decoration: none;
+}
+
+#header {
+  background-color: #283848;
+  color: #dddddd;
+  padding-bottom: 32px;
+}
+#header a { color: #dddddd; }
+
+#menu a:hover { color: white; }
+
+#logo { font-size: 64px; }
+
+.nowrap { white-space: nowrap; }
+
+#content {
+  margin: 0 auto;
+  padding: 32px 0;
+}
+#content a { color: blue; }
+
+#searchform { margin-bottom: 29px; }
+
+input[type=text], button {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  color: #3d1903;
+  font-family: Lato;
+  font-size: 16px;
+  outline: none;
+  padding: 9px 10px;
+}
+
+input[type=text] { background-color: white; }
+
+button {
+  background-color: #e8e8e8;
+  cursor: pointer;
+
+}
+button:hover { background-color: #d8d8d8; }
+
+#info { text-align: justify; }
+
+.wrapper { overflow-x: auto; }
+table { margin: 0 auto; }
+td { padding: 3px 10px; }

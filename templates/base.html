@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}Morphy number{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 <div id="header">
@@ -26,7 +27,8 @@
       <input type="text" id="player-2" value="{{ player_2 }}" autocomplete="off">
       <button id="find">find</button>
     </span>
-  </div>
+  </div>{% block extra_content %}
+{% endblock %}  <script src="/static/script.js"></script>
 {% endblock %}</div>
 </body>
 </html>
