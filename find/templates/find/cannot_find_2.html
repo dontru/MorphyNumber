@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block extra_content %}
+  Cannot find <i>{{ player_2 }}</i>.{% for match in close_matches %}{% if player_1 == "Paul Morphy" %}
+  <br><a href="{% url 'results' match %}">{{ match }}</a>{% else %}
+  <br><a href="{% url 'results' player_1 match %}">{{ match }}</a>{% endif %}{% endfor %}
+{% endblock %}

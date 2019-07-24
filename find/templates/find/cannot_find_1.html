@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+
+{% block extra_content %}
+  Cannot find <i>{{ player_1 }}</i>.{% for match in close_matches %}
+  <br><a href="{% url 'results' match player_2 %}">{{ match }}</a>{% endfor %}
+{% endblock %}

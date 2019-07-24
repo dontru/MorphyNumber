@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block extra_content %}
+  {% if player_1 == "Paul Morphy" %}{{ player_2 }} has a Morphy number of {{ morphy_number }}
+  {% else %}{{ player_2 }} has a {{ player_1 }} number of {{ morphy_number }}{% endif %}<br><br>
+  <div class="wrapper">
+    <table>
+    {% for game in games %}  <tr>
+        <td>{{ game.white }}</td>
+        <td>{{ game.result }}</td>
+        <td>{{ game.black }}</td>
+        <td>{{ game.site }}</td>
+        <td>{{ game.year }}</td>
+      </tr>
+    {% endfor %}</table>
+  </div>
+{% endblock %}
