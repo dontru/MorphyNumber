@@ -32,3 +32,9 @@ class Game(models.Model):
 
     def __str__(self):
         return "{} {} {} {} {}".format(self.white, self.result, self.black, self.site, self.year)
+
+    def opponent(self, player):
+        if self.white != player:
+            return self.white
+        else:
+            return self.black
